@@ -24,13 +24,13 @@ function mapBackendToEvent(dto: any): Event {
     endTime: endHour,
     location: dto.onlineLink ? "Evento Online" : (dto.location?.name ?? "Local Indefinido"),
     campus: (dto.location?.city?.toLowerCase() || "ondina") as Event["campus"],
-    speakers: [],
+    speakers: dto.speakers,
     capacity: dto.maxCapacity ?? 0,
     registered: 0,
-    requirements: [],
+    requirements: dto.requirementDescription,
     organizer: dto.organizerName ?? "",
     organizerType: "Professor",
-    tags: [],
+    tags: dto.tags,
     isRegistered: false,
   };
 }

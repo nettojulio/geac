@@ -15,4 +15,9 @@ public class EventRequirement {
 
     @Column(length = 255, nullable = false)
     private String description;
+
+    @Override
+    public String toString() {
+        return description;
+    }
 }

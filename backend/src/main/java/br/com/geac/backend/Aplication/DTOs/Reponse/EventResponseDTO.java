@@ -1,6 +1,7 @@
 package br.com.geac.backend.Aplication.DTOs.Reponse;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 public record EventResponseDTO(
@@ -23,6 +24,10 @@ public record EventResponseDTO(
     String organizerName,
     String organizerEmail,
 
-    Integer requirementId,
-    String requirementDescription
+    Integer reqId,
+    List<String> requirementDescription,
+
+    List<String> tags,
+    List<String> speakers
+
 ) {}
